@@ -1,0 +1,11 @@
+{
+  "startupTasks": [
+    {
+      "name": "HMRouter",
+      "srcEntry": "./ets/startup/HMRouterStartupTask.ets",
+      "runOnThread": "mainThread",
+      "waitOnMainThread": true
+    }
+  ],
+  "configEntry": "./ets/startup/SeedStartupConfig.ets"
+}

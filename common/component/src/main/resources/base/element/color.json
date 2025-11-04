@@ -1,0 +1,136 @@
+{
+  "color": [
+    {
+      "name": "app_tab_text_select_color",
+      "value": "#dd3030"
+    },
+    {
+      "name": "app_tab_text_default_color",
+      "value": "#999999"
+    },
+    {
+      "name": "white",
+      "value": "#ffffff"
+    },
+    {
+      "name": "black",
+      "value": "#000000"
+    },
+    {
+      "name": "app_tab_background_color",
+      "value": "#E0FFFFFF"
+    },
+    {
+      "name": "app_tab_line_color",
+      "value": "#CCCCCC"
+    },
+    {
+      "name": "default_text_color",
+      "value": "#111111"
+    },
+    {
+      "name": "divider_color_ddd",
+      "value": "#dddddd"
+    },
+    {
+      "name": "text_input_hint_color",
+      "value": "#999999"
+    },
+    {
+      "name": "transparent",
+      "value": "#00000000"
+    },
+    {
+      "name": "progress_background_color",
+      "value": "#66000000"
+    },
+    {
+      "name": "brand",
+      "value": "#ee5050"
+    },
+    {
+      "name": "88dd3030",
+      "value": "#88dd3030"
+    },
+    {
+      "name": "f5f5f5",
+      "value": "#f5f5f5"
+    },
+    {
+      "name": "999",
+      "value": "#999"
+    },
+    {
+      "name": "666",
+      "value": "#666"
+    },
+    {
+      "name": "f59696",
+      "value": "#f59696"
+    },
+    {
+      "name": "ee5050",
+      "value": "#ee5050"
+    },
+    {
+      "name": "2f92ff",
+      "value": "#2f92ff"
+    },
+    {
+      "name": "ddd",
+      "value": "#ddd"
+    },
+    {
+      "name": "4185F5",
+      "value": "#4185F5"
+    },
+    {
+      "name": "bebebe",
+      "value": "#BEBEBE"
+    },
+    {
+      "name": "e2e2e3",
+      "value": "#e2e2e3"
+    },
+    {
+      "name": "9b9b9b",
+      "value": "#9b9b9b"
+    },
+    {
+      "name": "979797",
+      "value": "#979797"
+    },
+    {
+      "name": "80000000",
+      "value": "#80000000"
+    },
+    {
+      "name": "80ffffff",
+      "value": "#80ffffff"
+    },
+    {
+      "name": "B2B2B2",
+      "value": "#B2B2B2"
+    },
+    {
+      "name": "888",
+      "value": "#888"
+    },
+    {
+      "name": "333333",
+      "value": "#333333"
+    },
+    {
+      "name": "ff0000",
+      "value": "#ff0000"
+    },
+    {
+      "name": "0080fc",
+      "value": "#0080fc"
+    },
+    {
+      "name": "444444",
+      "value": "#444444"
+    }
+  ]
+}

@@ -5,6 +5,9 @@
   "main": "",
   "author": "",
   "license": "",
-  "dependencies": {}
+  "dependencies": {
+    "component": "file:../common/component",
+    "@hadss/hmrouter": "^1.2.2"
+  }
 }
 

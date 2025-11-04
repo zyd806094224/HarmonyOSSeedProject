@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "ComponentAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "ComponentAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "page_not_found",
+      "value": "页面未找到"
+    },
+    {
+      "name": "close",
+      "value": "关闭"
+    },
+    {
+      "name": "request_network_reason",
+      "value": "访问互联网"
+    }
+  ]
+}

@@ -1,6 +1,3 @@
-import { HMRouterMgr } from '@hadss/hmrouter';
-import { RouterUrl } from 'component';
-
 @Entry
 @Component
 struct Index {
@@ -18,14 +15,6 @@ struct Index {
         })
         .onClick(() => {
           this.message = 'Welcome';
-          HMRouterMgr.push({
-            navigationId: '',
-            pageUrl: RouterUrl.WEB_PAGE_URL,
-            param: {
-              url: '',
-              title: '测试标题'
-            }
-          })
         })
     }
     .height('100%')

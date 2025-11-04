@@ -1,22 +1,12 @@
-import { AbilityConstant, ConfigurationConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { window } from '@kit.ArkUI';
-import { Logger } from 'component';
 
 const DOMAIN = 0x0000;
 
-const TAG = 'EntryAbility'
-
-export default class EntryAbility extends UIAbility {
+export default class ComponentAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    this.context.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_NOT_SET);
     hilog.info(DOMAIN, 'testTag', '%{public}s', 'Ability onCreate');
-
-    // 监听应用初始化完成
-    this.context.eventHub.on('initCompleted', () => {
-      Logger.i(TAG, 'application init completed')
-    })
-
   }
 
   onDestroy(): void {
@@ -27,7 +17,7 @@ export default class EntryAbility extends UIAbility {
     // Main window is created, set main page for this ability
     hilog.info(DOMAIN, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
 
-    windowStage.loadContent('pages/Launcher', (err) => {
+    windowStage.loadContent('pages/Index', (err) => {
       if (err.code) {
         hilog.error(DOMAIN, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err));
         return;

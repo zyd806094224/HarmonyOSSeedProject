@@ -1,0 +1,18 @@
+{
+  "module": {
+    "name": "component",
+    "type": "har",
+    "description": "$string:module_desc",
+    "deviceTypes": [
+      "phone",
+      "tablet",
+      "2in1"
+    ],
+    "requestPermissions": [
+      {
+        "name": "ohos.permission.INTERNET",
+        "reason": "$string:request_network_reason"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "apiType": "stageMode",
+  "buildOption": {
+  },
+  "buildOptionSet": [
+    {
+      "name": "release",
+      "arkOptions": {
+        "buildProfileFields": {
+          "apiDebug": false,
+          "sdkDebug": false
+        },
+        "obfuscation": {
+          "ruleOptions": {
+            "enable": false,
+            "files": [
+              "./obfuscation-rules.txt"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "debug",
+      "arkOptions": {
+        "buildProfileFields": {
+          "apiDebug": true,
+          "sdkDebug": true
+        }
+      }
+    }
+  ],
+  "targets": [
+    {
+      "name": "default"
+    },
+    {
+      "name": "ohosTest",
+    }
+  ]
+}

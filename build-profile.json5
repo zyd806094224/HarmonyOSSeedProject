@@ -36,6 +36,18 @@
           ]
         }
       ]
+    },
+    {
+      "name": "component",
+      "srcPath": "./common/component",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
     }
   ]
 }

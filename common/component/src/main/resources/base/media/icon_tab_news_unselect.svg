@@ -1,0 +1,11 @@
+<svg id="vector" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 36 36">
+    <path fill="#00000000"
+          d="M7,2L29,2C31.7614,2 34,4.2386 34,7L34,22.6445L34,29C34,31.7614 31.7614,34 29,34L7,34C4.2386,34 2,31.7614 2,29L2,7C2,4.2386 4.2386,2 7,2Z"
+          stroke-width="3" stroke="#444444" fill-rule="evenodd" id="path_0"/>
+    <path fill="#444444"
+          d="M9.5,12L26.5,12A1.5,1.5 0,0 1,28 13.5L28,13.5A1.5,1.5 0,0 1,26.5 15L9.5,15A1.5,1.5 0,0 1,8 13.5L8,13.5A1.5,1.5 0,0 1,9.5 12z"
+          stroke-width="1" fill-rule="evenodd" stroke="#00000000" id="path_1"/>
+    <path fill="#444444"
+          d="M9.5,20L19.5,20A1.5,1.5 0,0 1,21 21.5L21,21.5A1.5,1.5 0,0 1,19.5 23L9.5,23A1.5,1.5 0,0 1,8 21.5L8,21.5A1.5,1.5 0,0 1,9.5 20z"
+          stroke-width="1" fill-rule="evenodd" stroke="#00000000" id="path_2"/>
+</svg>

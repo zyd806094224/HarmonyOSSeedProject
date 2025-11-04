@@ -1,0 +1,13 @@
+{
+  "name": "component",
+  "version": "1.0.0",
+  "description": "公共组件",
+  "main": "Index.ets",
+  "author": "",
+  "license": "",
+  "packageType": "InterfaceHar",
+  "dependencies": {
+    "@hadss/hmrouter": "^1.2.2"
+  }
+}
+
