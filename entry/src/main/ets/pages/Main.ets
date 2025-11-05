@@ -61,7 +61,7 @@ export struct Main {
     Column() {
       HMNavigation({
         navigationId: MainConstants.MAIN_NAVIGATION_ID,
-        homePageUrl: this.pageTabs[0], // 默认页面
+        homePageUrl: this.pageTabs[1], // 默认页面
         // homePageUrl: RouterUrl.ONE_TAB_INDEX_PAGE, // 测试页面
         options: {
           standardAnimator: HMDefaultGlobalAnimator.STANDARD_ANIMATOR,

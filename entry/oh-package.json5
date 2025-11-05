@@ -7,6 +7,10 @@
   "license": "",
   "dependencies": {
     "component": "file:../common/component",
+    "one": "file:../features/one",
+    "two": "file:../features/two",
+    "three": "file:../features/three",
+    "four": "file:../features/four",
     "@hadss/hmrouter": "^1.2.2"
   }
 }
