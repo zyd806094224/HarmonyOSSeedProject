@@ -50,12 +50,19 @@ export struct Main {
     })
   }
 
+  /**
+   * 组件即将隐藏
+   */
+  aboutToDisappear(): void {
+    uiObserver.off('navDestinationSwitch', this.getUIContext(), { navigationId: MainConstants.MAIN_NAVIGATION_ID })
+  }
+
   build() {
     Column() {
       HMNavigation({
         navigationId: MainConstants.MAIN_NAVIGATION_ID,
-        // homePageUrl: this.pageTabs[1], // 默认发现页面
-        homePageUrl: RouterUrl.TEST_PAGE_URL, // 默认发现页面
+        homePageUrl: this.pageTabs[0], // 默认页面
+        // homePageUrl: RouterUrl.ONE_TAB_INDEX_PAGE, // 测试页面
         options: {
           standardAnimator: HMDefaultGlobalAnimator.STANDARD_ANIMATOR,
           modifier: this.modifier
@@ -70,7 +77,7 @@ export struct Main {
           }
         })
 
-      // MainBottomTab()
+      MainBottomTab()
     }.height('100%')
     .width('100%')
   }

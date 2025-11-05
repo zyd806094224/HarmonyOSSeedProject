@@ -1,0 +1,14 @@
+{
+  "name": "three",
+  "version": "1.0.0",
+  "description": "Please describe the basic information.",
+  "main": "Index.ets",
+  "author": "",
+  "license": "",
+  "packageType": "InterfaceHar",
+  "dependencies": {
+    "component": "file:../../common/component",
+    "@hadss/hmrouter": "^1.2.2"
+  }
+}
+
