@@ -83,6 +83,7 @@ export struct WebPage {
     // 如果不是通过路由打开页面可能没有参数
     if (HMRouterMgr.getCurrentParam()) {
       this.pageData = HMRouterMgr.getCurrentParam() as WebPageData;
+      this.url = this.pageData.url ?? ''
       // 监听返回键
       owner?.addObserver(HMLifecycleState.onBackPressed, () => {
         if (this.shouldInterceptBack()) {
@@ -261,19 +262,5 @@ export struct WebPage {
     // this.controller.deleteJavaScriptRegister(this.bridgeName)
     // // 回调页面销毁
     // this.bridge.onPageDestroy()
-  }
-
-  /**
-   * 测试路由跳转
-   */
-  _testFun() {
-    HMRouterMgr.push({
-      navigationId: '',
-      pageUrl: RouterUrl.WEB_PAGE_URL,
-      param: {
-        url: '',
-        title: '测试标题'
-      }
-    })
   }
 }

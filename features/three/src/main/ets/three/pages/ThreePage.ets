@@ -11,7 +11,7 @@ export struct ThreePage{
 
   build() {
     Column(){
-      Text('two测试页面')
+      Text('three测试页面')
         .fontSize($r('app.float.size_12'))
         .fontColor(Color.White)
     }.height('100%')
