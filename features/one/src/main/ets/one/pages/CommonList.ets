@@ -71,6 +71,7 @@ export struct CommonList {
       this._hasInit = true
     }
     if (this.isSelected) {
+      //触发首次刷新渲染列表
       this._bindShowAndHideWithFirstRefresh()
     }
   }
@@ -138,7 +139,7 @@ export struct CommonList {
   }
 
   /**
-   * 绑定页面显示和隐藏事件，并确保在第一次刷新时触发。
+   * 绑定页面显示和隐藏事件，并确保在第一次刷新时触发
    */
   private _bindShowAndHideWithFirstRefresh(): void {
     this.$onShow(() => {

@@ -1,13 +1,17 @@
-import { AnyType, LazyDataSource, RefreshDataInto,
+import {
+  AnyType,
+  LazyDataSource,
+  RefreshDataInto,
   RefreshDataState,
-  RefreshFooterController, RefreshHeaderController } from "component";
+  RefreshFooterController,
+  RefreshHeaderController
+} from "component";
 import { ListTabType } from "../enums/ListTabType";
 import { CommonListBasicModel, CommonNewsAdModel, CommonNewsModel } from "../model/CommonListModel";
 
 
 @ObservedV2
-export class CommonListViewModel{
-
+export class CommonListViewModel {
   /**
    * 数据源，用于存储和管理数据。
    * @type {LazyDataSource<CommonListBasicModel>}
@@ -18,18 +22,16 @@ export class CommonListViewModel{
    * @type {ListTabType}
    */
   readonly tabType: ListTabType
-
   /**
-   * 刷新头部控制器，用于管理刷新头部的状态和事件。
+   * 刷新头部控制器，用于管理刷新头部的状态和事件
    * @type {RefreshHeaderController}
    */
   @Trace headerController: RefreshHeaderController = new RefreshHeaderController();
   /**
-   * 刷新尾部控制器，用于管理刷新尾部的状态和事件。
+   * 刷新尾部控制器，用于管理刷新尾部的状态和事件
    * @type {RefreshFooterController}
    */
   @Trace footerController: RefreshFooterController = new RefreshFooterController();
-
   /**
    * 当前页码，用于分页加载新闻数据。
    * @private
@@ -54,8 +56,8 @@ export class CommonListViewModel{
   }
 
   /**
-   * 计算属性，判断数据源是否为空。
-   * @returns {boolean} 如果数据源中没有数据，则返回 true。
+   * 计算属性，判断数据源是否为空
+   * @returns {boolean} 如果数据源中没有数据，则返回 true
    */
   @Computed
   get isEmpty(): boolean {
@@ -65,8 +67,8 @@ export class CommonListViewModel{
 
   /**
    * 刷新数据时调用的方法。
-   * 重置页码，获取第一页的数据，并将数据添加到数据源中。
-   * @returns {Promise<RefreshDataInto>} 刷新结果的状态。
+   * 重置页码，获取第一页的数据，并将数据添加到数据源中
+   * @returns {Promise<RefreshDataInto>} 刷新结果的状态
    */
   private onRefresh(): Promise<RefreshDataInto> {
     return new Promise((resolve, _) => {
@@ -125,7 +127,8 @@ export class CommonListViewModel{
         const newsList: CommonNewsModel[] = [];
         for (let i = 0; i < pageSize; i++) {
           const index = startIndex + i;
-          let commonNewsModel = new CommonNewsModel(`news_${index}`, `news_${index}`,`这是第${page}页第${i + 1}条新闻的概要内容，用于测试展示。这是一段模拟的新闻摘要文本。`,'')
+          let commonNewsModel = new CommonNewsModel(`news_${index}`, `news_${index}`,
+            `这是第${page}页第${i + 1}条新闻的概要内容，用于测试展示。这是一段模拟的新闻摘要文本。`, '')
           newsList.push(commonNewsModel);
         }
         resolve(newsList); // 返回生成的测试数据
@@ -137,10 +140,9 @@ export class CommonListViewModel{
     // 模拟异步请求（如网络请求延迟）
     return new Promise((resolve) => {
       setTimeout(() => {
-        let commonNewsAdModel = new CommonNewsAdModel('1', 3,'')
+        let commonNewsAdModel = new CommonNewsAdModel('1', 3, '')
         resolve(commonNewsAdModel); // 返回生成的测试数据
       }, 500); // 模拟500ms网络延迟
     });
   }
-
 }
