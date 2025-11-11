@@ -1,0 +1,7 @@
+
+default:
+"keyAlias": "debug"
+"明文密码"："000000Dong"
+
+release:
+
