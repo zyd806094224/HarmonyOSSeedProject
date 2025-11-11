@@ -140,7 +140,7 @@ export class CommonListViewModel {
     // 模拟异步请求（如网络请求延迟）
     return new Promise((resolve) => {
       setTimeout(() => {
-        let commonNewsAdModel = new CommonNewsAdModel('1', 3, '')
+        let commonNewsAdModel = new CommonNewsAdModel('1', 3, 'https://pic4.58cdn.com.cn/nowater/lbgfe/image/n_v38159f9cf963649bb919829e77e478c33.png')
         resolve(commonNewsAdModel); // 返回生成的测试数据
       }, 500); // 模拟500ms网络延迟
     });
