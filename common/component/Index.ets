@@ -20,3 +20,7 @@ export * from './src/main/ets/components/skeleton/index'
 export * from './src/main/ets/components/safeArea/index'
 
 export * from './src/main/ets/components/tab/index'
+
+export { LazyDataSource } from './src/main/ets/utils/LazyDataSource'
+
+export { BasicDataSource } from './src/main/ets/utils/BasicDataSource'
