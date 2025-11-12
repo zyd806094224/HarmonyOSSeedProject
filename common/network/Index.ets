@@ -1,7 +1,7 @@
 
 /**
- * @desc Barrel file for the network module.
- * It exports all the necessary components for easy consumption.
+ * @desc 网络模块的汇总文件。
+ * 它导出所有必要的组件以便于使用。
  */
 
 export * from './src/main/ets/http';

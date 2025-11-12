@@ -1,39 +1,39 @@
 
 /**
- * @desc Defines interfaces for request and response interceptors.
+ * @desc 定义请求和响应拦截器的接口。
  */
 import { CustomRequestOptions } from './model';
 import { HttpError } from './error';
 
 /**
- * Request interceptor interface.
+ * 请求拦截器接口。
  */
 export interface RequestInterceptor {
   /**
-   * A hook that is called before the request is sent.
-   * It can modify the request configuration.
-   * @param config The request configuration.
-   * @returns The modified configuration or a Promise that resolves to it.
+   * 在发送请求之前调用的钩子。
+   * 它可以修改请求配置。
+   * @param config 请求配置。
+   * @returns 修改后的配置或解析为该配置的Promise。
    */
   onRequest(config: CustomRequestOptions): CustomRequestOptions | Promise<CustomRequestOptions>;
 }
 
 /**
- * Response interceptor interface.
+ * 响应拦截器接口。
  */
 export interface ResponseInterceptor<T = unknown> {
   /**
-   * A hook that is called when a response is successfully received.
-   * It can transform the response data.
-   * @param response The response object from the HTTP request.
-   * @returns The transformed data or a Promise that resolves to it.
+   * 成功接收到响应时调用的钩子。
+   * 它可以转换响应数据。
+   * @param response 来自HTTP请求的响应对象。
+   * @returns 转换后的数据或解析为该数据的Promise。
    */
   onResponse(response: T): T | Promise<T>;
 
   /**
-   * A hook that is called when an error occurs during the request.
-   * @param error The error object.
-   * @returns A Promise that should be rejected with the error.
+   * 请求期间发生错误时调用的钩子。
+   * @param error 错误对象。
+   * @returns 应该以错误拒绝的Promise。
    */
   onError(error: HttpError): Promise<never>;
 }

@@ -1,6 +1,6 @@
 
 /**
- * @desc Core implementation of the HttpClient.
+ * @desc HttpClient的核心实现。
  */
 import http from '@ohos.net.http';
 import { ApiResult, CustomRequestOptions } from './model';
@@ -22,56 +22,56 @@ class HttpClient {
   }
 
   /**
-   * Adds a request interceptor.
-   * @param interceptor The request interceptor to add.
+   * 添加请求拦截器。
+   * @param interceptor 要添加的请求拦截器。
    */
   addRequestInterceptor(interceptor: RequestInterceptor): void {
     this.requestInterceptors.push(interceptor);
   }
 
   /**
-   * Adds a response interceptor.
-   * @param interceptor The response interceptor to add.
+   * 添加响应拦截器。
+   * @param interceptor 要添加的响应拦截器。
    */
   addResponseInterceptor(interceptor: ResponseInterceptor): void {
     this.responseInterceptors.push(interceptor);
   }
 
   /**
-   * Makes a GET request.
-   * @template T The expected type of the 'data' field in the API response.
+   * 发起GET请求。
+   * @template T API响应中'data'字段的预期类型。
    */
   async get<T>(url: string, params?: Record<string, string | number | boolean>, options?: Omit<CustomRequestOptions, 'url' | 'params'>): Promise<ApiResult<T>> {
     return this.request<T>({ ...options, url, params, method: http.RequestMethod.GET });
   }
 
   /**
-   * Makes a POST request.
-   * @template T The expected type of the 'data' field in the API response.
+   * 发起POST请求。
+   * @template T API响应中'data'字段的预期类型。
    */
   async post<T>(url: string, data?: object | string, options?: Omit<CustomRequestOptions, 'url' | 'data'>): Promise<ApiResult<T>> {
     return this.request<T>({ ...options, url, data, method: http.RequestMethod.POST });
   }
 
   /**
-   * Makes a PUT request.
-   * @template T The expected type of the 'data' field in the API response.
+   * 发起PUT请求。
+   * @template T API响应中'data'字段的预期类型。
    */
   async put<T>(url: string, data?: object | string, options?: Omit<CustomRequestOptions, 'url' | 'data'>): Promise<ApiResult<T>> {
     return this.request<T>({ ...options, url, data, method: http.RequestMethod.PUT });
   }
 
   /**
-   * Makes a DELETE request.
-   * @template T The expected type of the 'data' field in the API response.
+   * 发起DELETE请求。
+   * @template T API响应中'data'字段的预期类型。
    */
   async delete<T>(url: string, options?: Omit<CustomRequestOptions, 'url'>): Promise<ApiResult<T>> {
     return this.request<T>({ ...options, url, method: http.RequestMethod.DELETE });
   }
 
   /**
-   * The core request method.
-   * @template T The expected type of the 'data' field in the API response.
+   * 核心请求方法。
+   * @template T API响应中'data'字段的预期类型。
    */
   async request<T>(options: CustomRequestOptions): Promise<ApiResult<T>> {
     let config = await this.applyRequestInterceptors(options);

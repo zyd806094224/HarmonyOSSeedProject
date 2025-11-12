@@ -1,19 +1,19 @@
 
 /**
- * @desc Defines custom error classes for HTTP requests.
+ * @desc 定义HTTP请求的自定义错误类。
  */
 
 /**
- * Represents an error that occurs during an HTTP request.
+ * 表示在HTTP请求期间发生的错误。
  */
 export class HttpError extends Error {
   /**
-   * The HTTP status code.
+   * HTTP状态码。
    */
   readonly code: number;
 
   /**
-   * The response data, if any.
+   * 响应数据（如果有）。
    */
   readonly response: string | object | undefined;
 
@@ -26,7 +26,7 @@ export class HttpError extends Error {
 }
 
 /**
- * Represents an error for a cancelled HTTP request.
+ * 表示已取消HTTP请求的错误。
  */
 export class HttpCancelError extends HttpError {
   constructor(message: string = 'Request canceled') {
