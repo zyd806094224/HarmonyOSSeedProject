@@ -13,6 +13,11 @@
     "installationFree": false,
     "appStartup": "$profile:startup_config",
     "pages": "$profile:main_pages",
+    "requestPermissions": [
+      {
+        "name": "ohos.permission.INTERNET",
+      }
+    ],
     "abilities": [
       {
         "name": "EntryAbility",

@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "NetworkAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "NetworkAbility_label",
+      "value": "label"
+    }
+  ]
+}

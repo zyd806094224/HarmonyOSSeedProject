@@ -110,6 +110,18 @@
           ]
         }
       ]
+    },
+    {
+      "name": "network",
+      "srcPath": "./common/network",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
     }
   ]
 }

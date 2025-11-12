@@ -1,0 +1,10 @@
+{
+  "name": "network",
+  "version": "1.0.0",
+  "description": "网络请求封装模块",
+  "main": "Index.ets",
+  "author": "",
+  "license": "",
+  "packageType": "InterfaceHar",
+  "dependencies": {}
+}

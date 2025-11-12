@@ -7,6 +7,7 @@
   "license": "",
   "packageType": "InterfaceHar",
   "dependencies": {
+    "network": "file:../../common/network",
     "component": "file:../../common/component",
     "@hadss/hmrouter": "^1.2.2"
   }

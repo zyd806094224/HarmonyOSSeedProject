@@ -6,6 +6,7 @@
   "author": "",
   "license": "",
   "dependencies": {
+    "network": "file:../common/network",
     "component": "file:../common/component",
     "one": "file:../features/one",
     "two": "file:../features/two",
